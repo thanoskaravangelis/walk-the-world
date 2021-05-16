@@ -1,0 +1,105 @@
+/* animations */
+@keyframes welcome {
+    0%{
+        display: block;
+        opacity:1;
+    }
+    99%{
+        height:100vh;
+    }
+    100%{
+        display: hidden;
+        opacity: 0;
+        height: 0vh;
+    }
+}
+
+/* general */
+.html{
+    margin: 0;
+}
+
+body{
+    margin: 0px;
+}
+
+.center-content {
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-container{
+    margin:0;
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(rgb(0, 63, 134) ,rgba(26, 75, 209, 0.835),rgb(15, 40, 70));
+    animation: welcome 5s 1;
+    animation-fill-mode:forwards;
+}
+
+#welcome-text{
+    margin:0;
+    position: absolute;
+    top:40%;
+    left:40%;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    top:0;
+    height:100px;
+    width: 100vw;
+    background-color: transparent;
+}
+
+#site-title{
+    position: relative;
+    align-self:center;
+    margin-left: 20px;
+    font-weight: 700;
+    color:rgb(11, 44, 190);
+}
+
+.main-container{
+    height: 100%;
+}
+
+.big-main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.iframe-container{
+    margin:20px;
+    width:60%;
+}
+
+.list-container{
+    width:20%;
+}
+
+.list-of-cities{
+    list-style: none;
+    overflow:hidden;
+    overflow-y:scroll;
+}
+
+.list-item{
+    padding:10px;
+    height:25px;
+    min-width:70px;
+}
+
+.list-item:hover{
+    color:black;
+    background-color: rgb(103, 161, 255);
+    cursor:pointer;
+}
+
