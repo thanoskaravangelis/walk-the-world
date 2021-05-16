@@ -21,6 +21,10 @@
 
 body{
     margin: 0px;
+    background-image: url('media/skyline.png');
+    background-size: 2000px 500px;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 .center-content {
@@ -35,7 +39,7 @@ body{
     width:100vw;
     height:100vh;
     background-image: linear-gradient(rgb(0, 63, 134) ,rgba(26, 75, 209, 0.835),rgb(15, 40, 70));
-    animation: welcome 5s 1;
+    animation: welcome 1s 1;
     animation-fill-mode:forwards;
 }
 
@@ -52,23 +56,34 @@ body{
 .nav-bar{
     display: flex;
     flex-direction: row;
-    position:relative;
-    top:0;
-    height:100px;
-    width: 100vw;
-    background-color: transparent;
+    border-radius: 12px;
+    margin-top:5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height:80px;
+    padding:5px;
+    width: auto;
 }
 
 #site-title{
+    display:flex;
+    flex-direction: row;
     position: relative;
-    align-self:center;
+    align-self: center;
+    margin-bottom: 10px;
     margin-left: 20px;
     font-weight: 700;
-    color:rgb(11, 44, 190);
+    color:rgb(0, 0, 0);
 }
 
 .main-container{
     height: 100%;
+}
+
+.bottom-container{
+    height:30vh;
+    position: relative;
+    bottom: 0 px;
 }
 
 .big-main-container{
@@ -76,24 +91,66 @@ body{
     flex-direction: row;
 }
 
+.empty-container{
+    width:10%;
+    flex-shrink: 5;
+}
+
 .iframe-container{
     margin:20px;
-    width:60%;
+    width:65%;
+    height:600px;
 }
 
 .list-container{
-    width:20%;
+    width:fit-content;
+    height:540px;
+    margin-top: 110px;
+    margin-right: 5px;
+    padding:10px;
+    border:1px solid rgb(199, 199, 199);
+    border-radius: 6px;
+}
+
+.nav-list-item{
+    min-width: 120px;
+}
+
+@media screen and (max-width:1440px) {
+
+    .empty-container{
+        display: none;
+        width: 0%;
+    }
+
+    .iframe-container{
+        width: 80%;
+    }    
+}
+
+@media screen and (max-width:1255px) {
+    .big-main-container{
+        flex-wrap: wrap;
+    }
+
+    .list-container{
+        width:fit-content;
+    }
+}
+
+#nav-tabs{
+    width:260px;
 }
 
 .list-of-cities{
     list-style: none;
     overflow:hidden;
     overflow-y:scroll;
+    height: inherit;
 }
 
 .list-item{
-    padding:10px;
-    height:25px;
+    padding:15px;
     min-width:70px;
 }
 
@@ -101,5 +158,9 @@ body{
     color:black;
     background-color: rgb(103, 161, 255);
     cursor:pointer;
+}
+
+#video-title{
+    color:rgb(12, 12, 77);
 }
 
