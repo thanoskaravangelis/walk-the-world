@@ -3,31 +3,45 @@
     <head>
         <script src="scripts.js"></script>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
         <div class="welcome-container center-content">
             <p id="welcome-text">Welcome to <br> Walk The World!</p>
         </div>
-        <div class="nav-bar">
-            <div id="site-title">
-                <h1>Walk The World</h1>
+        <div class="nav-nav center-content">
+            <div class="nav-bar">
+                <div id="site-title">
+                    <h1>Walk The World</h1>
+                </div>
             </div>
         </div>
         <div class="main-container">
             <div class="big-main-container center-content">
+                <div class="empty-container"></div>
                 <div class="iframe-container center-content">
                     <div class="center-content">
-                        <h1 id="video-title">Paris, France</h1>
+                        <p>You are now at:</p><h1 id="video-title">City, Country</h1>
                     </div>
-                    <iframe width="880" height="520" src="https://www.youtube.com/embed/ME2zyNBh3JM?modestbranding=1&rel=0&loop=1&autoplay=1&autohide=1&showinfo=0&controls=0&amp;start=30" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+                    <iframe id="video-frame" width="930" height="540" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
                 </div>
                 <div class="list-container center-content">
-                    <ul class="list-of-cities">
-                        <li class="list-item">Paris</li>
-                        <li class="list-item">London</li>
+                    <ul class="nav nav-tabs" id="nav-tabs">
+                        <li role="presentation" class="active nav-list-item"><a>Cities</a></li>
+                        <li role="presentation" class="nav-list-item"><a>Experiences</a></li>
                     </ul>
+                    <div class="list-list-container">
+                        <div class="list-of-cities">
+                            <div class="list-item" onclick="updateVidandTitle('Paris')">Paris, France</div>
+                            <div class="list-item" onclick="updateVidandTitle('London')">London, United Kingdom</div>
+                            <div class="list-item" onclick="updateVidandTitle('Athens')">Athens, Greece</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="bottom-container">
+
         </div>
     </body>
 </html>
